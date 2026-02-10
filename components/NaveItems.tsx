@@ -5,7 +5,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import React from "react";
 
-const NaveItem = () => {
+const NaveItems = () => {
   const pathname = usePathname();
   const isActive = (path: string) => {
     if (path === "/") return pathname === "/";
@@ -28,4 +28,4 @@ const NaveItem = () => {
   );
 };
 
-export default NaveItem;
+export default NaveItems;
