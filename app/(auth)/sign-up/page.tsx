@@ -35,6 +35,7 @@ const SignUp = () => {
     <>
       <h1 className="form-title">Sign Up & Personalize</h1>
       <form onSubmit={handleSubmit(onSubmit)} className="space-y-5">
+        {/* Full Name */}
         <InputField
           name="fullName"
           label="Full Name"
@@ -46,6 +47,39 @@ const SignUp = () => {
             minLength: {
               value: 2,
               message: "Full name must be at least 2 characters",
+            },
+          }}
+        />
+
+        {/* Email */}
+        <InputField
+          name="email"
+          label="Email"
+          placeholder="you@example.com"
+          register={register}
+          error={errors.email}
+          validation={{
+            required: "Email is required",
+            pattern: {
+              value: /^\w+@\w+\.\w+$/,
+              message: "Invalid email address",
+            },
+          }}
+        />
+
+        {/* Password */}
+        <InputField
+          name="password"
+          label="Password"
+          placeholder="Enter your password"
+          type="password"
+          register={register}
+          error={errors.password}
+          validation={{
+            required: "Password is required",
+            minLength: {
+              value: 8,
+              message: "Password must be at least 8 characters",
             },
           }}
         />
