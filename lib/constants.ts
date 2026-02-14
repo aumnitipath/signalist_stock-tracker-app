@@ -275,6 +275,20 @@ export const POPULAR_STOCK_SYMBOLS = [
   "ORCL",
   "CRM",
 
+  // My Hyper Growing Tech Companies
+  "RKLB",
+  "ASTS",
+  "ONDS",
+  "IREN",
+  "NBIS",
+  "RBRK",
+  "DDOG",
+  "CRWD",
+  "NET",
+  "OKTA",
+  "TWLO",
+  "ZM",
+
   // Growing Tech Companies
   "ADBE",
   "INTC",
