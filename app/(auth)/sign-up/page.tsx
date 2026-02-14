@@ -1,5 +1,6 @@
 "use client";
 
+import { CountrySelectField } from "@/components/forms/CountrySelectField";
 import InputField from "@/components/forms/InputField";
 import SelectField from "@/components/forms/SelectField";
 import { Button } from "@/components/ui/button";
@@ -91,6 +92,13 @@ const SignUp = () => {
         />
 
         {/* Country */}
+        <CountrySelectField
+          name="country"
+          label="Country"
+          control={control}
+          required
+          error={errors.country}
+        />
 
         {/* Investment Goals */}
         <SelectField
@@ -100,7 +108,7 @@ const SignUp = () => {
           options={INVESTMENT_GOALS}
           control={control}
           error={errors.investmentGoals}
-          required={true}
+          required
         />
 
         <SelectField
@@ -110,7 +118,7 @@ const SignUp = () => {
           options={RISK_TOLERANCE_OPTIONS}
           control={control}
           error={errors.riskTolerance}
-          required={true}
+          required
         />
 
         <SelectField
@@ -120,7 +128,7 @@ const SignUp = () => {
           options={PREFERRED_INDUSTRIES}
           control={control}
           error={errors.preferredIndustry}
-          required={true}
+          required
         />
 
         <Button
