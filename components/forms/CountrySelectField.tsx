@@ -57,7 +57,13 @@ const CountrySelect = ({
 
   const handleValueChange = (newValue: string | null) => {
     if (newValue) {
+      // เลือกประเทศ
       onChange(newValue);
+      setSearchValue("");
+      setIsOpen(false);
+    } else {
+      // กดปุ่ม clear (X)
+      onChange("");
       setSearchValue("");
       setIsOpen(false);
     }
